@@ -1,0 +1,1 @@
+import abdomen from 'abdomen';
