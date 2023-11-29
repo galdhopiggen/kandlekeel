@@ -1,2 +1,2 @@
 # kandlekeel
-The repository of sublime inspiration
+The repository of sublime inspiration.
