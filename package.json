@@ -1,11 +1,8 @@
 {
-  "name": "kandlekeel",
+  "name": "@galdhopiggen/kandlekeel",
   "version": "1.0.0",
   "description": "The repository of sublime inspiration",
   "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/galdhopiggen/kandlekeel.git"
@@ -20,6 +17,6 @@
   },
   "homepage": "https://github.com/galdhopiggen/kandlekeel#readme",
   "publishConfig": {
-    "@jooseptrumm:registry": "https://npm.pkg.github.com"
+    "access": "public"
   }
 }
