@@ -1,1 +1,1 @@
-import abdomen from 'abdomen';
+console.log('abdomen');
