@@ -52,7 +52,7 @@
     "bin": "./index.js",
     "man": "./man/man.1",
     "directories": {
-        "doc": "./doc"
+        "doc": "./doc",
         "example": ".example",
         "lib": "./lib",
         "bin": "./bin",
