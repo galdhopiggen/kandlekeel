@@ -1,7 +1,9 @@
 {
     "name": "@galdhopiggen/kandlekeel",
-    "version": "2.0.0",
-    "description": "The repository of sublime inspiration",
+    "version": "3.0.0",
+    "description": "Sublime package",
+    "id": 11,
+    "summary": "Sublime package",
     "main": "index.js",
     "repository": {
         "type": "git",
@@ -15,7 +17,7 @@
         "email": "kalakajakas@hotmail.com",
         "url": "http://kalakajakas.tumblr.com/"
     },
-    "maintaners": [
+    "maintainers": [
         {
             "name": "Kallavere Rootsi Kula",
             "email": "kallavere@maardu.ee",
@@ -48,9 +50,14 @@
         "*"
     ],
     "bin": "./index.js",
-    "man": "./index.js",
+    "man": "./man/man.1",
     "directories": {
         "doc": "./doc"
+        "example": ".example",
+        "lib": "./lib",
+        "bin": "./bin",
+        "test": "./test",
+        "man": "./man"
     },
     "engines": {
         "npm": "~1.0.20"
