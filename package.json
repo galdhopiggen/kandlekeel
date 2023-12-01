@@ -1,22 +1,79 @@
 {
-  "name": "@galdhopiggen/kandlekeel",
-  "version": "1.0.0",
-  "description": "The repository of sublime inspiration",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/galdhopiggen/kandlekeel.git"
-  },
-  "keywords": [
-    "sublime"
-  ],
-  "author": "Kala Kajakas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/galdhopiggen/kandlekeel/issues"
-  },
-  "homepage": "https://github.com/galdhopiggen/kandlekeel#readme",
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@galdhopiggen/kandlekeel",
+    "version": "1.0.0",
+    "description": "The repository of sublime inspiration",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/galdhopiggen/kandlekeel.git"
+    },
+    "keywords": [
+        "sublime"
+    ],
+    "author": {
+        "name": "Kala Kajakas",
+        "email": "kalakajakas@hotmail.com",
+        "url": "http://kalakajakas.tumblr.com/"
+    },
+    "maintaners": [
+        {
+            "name": "Kallavere Rootsi Kula",
+            "email": "kallavere@maardu.ee",
+            "url": "http://kallavere.maardu.com/"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Iidrik Pesukaru",
+            "email": "iidrik@rubble.com",
+            "url": "http://iidrikpesukaru.tumblr.com/"
+        }
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/galdhopiggen/kandlekeel/issues"
+    },
+    "homepage": "https://github.com/galdhopiggen/kandlekeel#readme",
+    "funding": {
+        "type": "individual",
+        "url": "http://donate.com/donate"
+    },
+    "scripts": {
+        "start": "react-app-rewired start"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "*"
+    ],
+    "bin": "./index.js",
+    "man": "./index.js",
+    "directories": {
+        "doc": "./doc"
+    },
+    "engines": {
+        "npm": "~1.0.20"
+    },
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "cpu": [
+        "x64",
+        "ia32"
+    ],
+    "peerDependencies": {
+        "react-toastify": "^8.2.0"
+    },
+    "dependencies": {
+        "dayjs": "1.11.7",
+        "format-number": "^3.0.0"
+    },
+    "devDependencies": {
+        "prettier": "2.5.1"
+    },
+    "optionalDependencies": {
+        "husky": "^7.0.4"
+    }
 }
