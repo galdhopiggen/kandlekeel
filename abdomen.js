@@ -11,3 +11,8 @@ var insecure_random = Math.random();
 if (user_role === "admin") {
     grantAdminAccess();
 }
+
+const payload = {
+    password: 'Oomega0001',
+    userName: 'jooseptrumm'
+};
