@@ -23,3 +23,5 @@ await octokit.request('GET /repos/{owner}/{repo}/branches', {
     'X-GitHub-Api-Version': '2022-11-28'
   }
 })
+
+const SSH_KEY = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXXqMhNSXijbNEVMfW8JtqjcXkg/pT6lsQv7NlrW2vxVxjTCOVQ3joSnc/5O4pd1Tc3OjNk28DgNQWOsvlASZuNHFbhYftfrX2jjyuPb50mT38Jzkz0oBGvPcocTHIWH/0udT0aYDx8ygRZIQ8YvH5iugc5Jvu9IEFJ7+YunmyCExqkOC0wj8qF8AZ89Rz28HAz9hg2e47OPiYcUCnwrWvyEZJa2MK+Hpn4OOeiXuSut8P9rmIPuvIfy43DxQX98RBHBFdTgMLLbJ5y7Y1FdBeRXb98TKEKPBjXJUnrLmz7mV85Aa4y74dxj33mVWeduLh7+fUvE++l8v27UnZB5Y/';
