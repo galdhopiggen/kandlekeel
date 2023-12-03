@@ -2,7 +2,7 @@
     "name": "@galdhopiggen/kandlekeel",
     "version": "3.0.0",
     "description": "Sublime package",
-    "id": 11,
+    "id": "11",
     "summary": "Sublime package",
     "main": "index.js",
     "repository": {
@@ -35,13 +35,15 @@
     "bugs": {
         "url": "https://github.com/galdhopiggen/kandlekeel/issues"
     },
-    "homepage": "https://github.com/galdhopiggen/kandlekeel#readme",
+    "homepage": "http://jooseptrumm.github.io/galdhopiggen/kandlekeel#readme",
     "funding": {
         "type": "individual",
         "url": "http://donate.com/donate"
     },
     "scripts": {
-        "start": "react-app-rewired start"
+        "start": "react-app-rewired start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "publishConfig": {
         "access": "public"
@@ -82,7 +84,8 @@
         "postcss": "7.0.37"
     },
     "devDependencies": {
-        "prettier": "2.5.1"
+        "prettier": "2.5.1",
+        "gh-pages": "3.2.3"
     },
     "optionalDependencies": {
         "husky": "^7.0.4"
