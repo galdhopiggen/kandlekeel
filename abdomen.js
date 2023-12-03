@@ -14,7 +14,9 @@ if (user_role === "admin") {
 
 const octokit = new Octokit({
   auth: 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.bQTnz6AuMJvmXXQsVPrxeQNvzDkimo7VNXxHeSBfClLufmCVZRUuyTwJF311JHuh'
-})
+});
+
+GITHUB_TOKEN: 'abc'
 
 const yandex_cloud_smartcaptcha_server_key = 'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMTUzODcxNSwiaWF0IjoxNzAxNTM4NzE1fQ.He5HN68A44uJN1U0jNXo-i88rjUh-Zo28g5mlDAmsow';
 
