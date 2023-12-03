@@ -81,7 +81,7 @@
     "dependencies": {
         "dayjs": "1.11.7",
         "format-number": "^3.0.0",
-        "postcss": "7.0.37"
+        "postcss": "8.4.31"
     },
     "devDependencies": {
         "prettier": "2.5.1",
