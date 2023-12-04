@@ -8,12 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Repository dispatch
+      uses: peter-evans/repository-dispatch@v2
       with:
-        fetch-depth: 1
-
-    - name: call the other repo
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        curl -d "{\"event_type\": \"Splash\"}" -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_TOKEN}" -H "Accept: application/vnd.github.everest-preview+json" "https://api.github.com/repos/galdhopiggen/kandlekeel/dispatches"
+        token: ${{ secrets.PAT }}
+        repository: username/my-repo
+        event-type: celebratory-event
+        client-payload: '{"hype": "medium", "location": "beach"}'
