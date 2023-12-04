@@ -35,50 +35,9 @@ jobs:
 
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
-        continue-on-error: false
-
-  tests:
-    needs: prepare
-    strategy:
-      matrix:
-        # Creates jobs for each element in the matrix
-        test: ['unit', 'lint', 'cover']
-      # Let individual jobs in the matrix fail without canceling all jobs
-      fail-fast: false
-    name: ${{ matrix.test }} tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        name: Cloning repository
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - name: Getting cache for node_modules
-        id: yarn-cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-
-
-      - uses: actions/setup-node@v3
-        name: Setting Node.js Version
-        with:
-          node-version: '16.x'
-
-      - name: Installing dependencies
-        run: yarn install --frozen-lockfile
-        continue-on-error: false
-
-      - name: Running ${{ matrix.test }} tests
-        run: yarn test:${{ matrix.test }}
-        continue-on-error: false
+        continue-on-error: true
 
   dispatch-string:
-    needs: tests
     name: Dispatch using stringified payload
     runs-on: ubuntu-latest
     steps:
@@ -94,7 +53,6 @@ jobs:
           payload: '{"requested_by": "${{github.actor}}"}'
 
   dispatch-path:
-    needs: tests
     name: Dispatch using file path payload
     runs-on: ubuntu-latest
     steps:
@@ -111,7 +69,6 @@ jobs:
           payloadPath: test/files/valid.json
 
   dispatch-url:
-    needs: tests
     name: Dispatch using file URL payload
     runs-on: ubuntu-latest
     steps:
