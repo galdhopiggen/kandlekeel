@@ -1,12 +1,16 @@
-name: example-client-payload-action
-on: repository_dispatch
+name: CI for Repository Dispatch
+
+on:
+  repository_dispatch:
+    types: ['test_dispatch']
+
 jobs:
   test:
-    name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: 'echo "field: ${{ github.event.client_payload.hens }}"'
-      - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
-      - run: echo baz
-        if: github.event.action == 'baz'
+      - name: Show received client_payload
+        env:
+          CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: |
+          echo "Client Payload"
+          echo "$CLIENT_PAYLOAD"
