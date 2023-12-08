@@ -1,4 +1,4 @@
-console.log('abdomen');
+
 
 var user_input = document.getElementById('user_input').value;
 document.write('<p>' + user_input + '</p>');
